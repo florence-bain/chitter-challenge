@@ -7,5 +7,18 @@ class Chitter < Sinatra::Base
   end
 
 
-  run! if app_file == $0
+get '/' do
+  'chitter feed'
+end 
+
+get '/peep' do
+  @peep = [
+    "make a post",
+    "first post",
+    "I love coding"
+  ]
+    erb :index
+end 
+
+run! if app_file == $0
 end
