@@ -23,7 +23,7 @@ get '/peeps' do
 end 
 
 post '/peeps' do
-  Peep.create(url: params[:url], time: params[:time])
+  Peep.create(url: params[:url])
   redirect '/peeps'
 end 
 
