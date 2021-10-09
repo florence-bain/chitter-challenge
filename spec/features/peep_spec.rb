@@ -11,5 +11,5 @@ feature 'See what others are posting' do
     expect(page).to have_content 'test comment'
     expect(page).to have_content 'test peep'
     expect(page).to have_content 'test message'
-  end  
+  end 
 end 

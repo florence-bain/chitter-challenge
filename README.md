@@ -14,9 +14,9 @@ We are going to write a small Twitter clone that will allow the users to post me
 ## My approach:
 
 - When setting this challenge up I felt really lost and unsure what I was meant to be doing, I attempted this two weeks after it was initially set as I wanted to go back on the work I had done and refresh my memory. As well as work on a full stack program as I found these challenges to be the hardest and most confusing.
-- I started by establishing what my goal was to get out of this challenge and this is to test and grow my knowledge.
+- I started by establishing what my goal was to get out of this challenge and this is to test and grow my knowledge of how web applications work with databases and the UI.
 - I initially started by going in head first which caused some issues and prolonged errors, so I took a step back, found the reason why I was having errors and then looked at the Bookmark Manager week challenge for some structure.
-- I decided at most I would like this app to be very simple, it allows you to make a post and see other peoples posts. For this to be attainable I set up my database and test database using Table Plus SQL.
+- I decided at most I would like this app to be simple, it allows you to make a post and see other peoples posts. For this to be attainable I set up my database and test database using Table Plus SQL and started by mapping the peeps to the app. I then reversed the order so they are now printed in reverse chronological order.
 - Features:
 
 ---

@@ -17,8 +17,15 @@ get '/peeps' do
     erb :'peeps/index'
 end 
 
-post '/peeps/new' do
+get '/peeps/new' do 
   erb :'peeps/new'
+end
+
+post '/peeps' do
+  url = params['url']
+  connect =PG.connect(dbname: 'chitter_test')
+  connection.exec("INSERT INTO peeps (url) VALUES('#{url})")
+  redirect '/peeps'
 end 
 
 run! if app_file == $0
