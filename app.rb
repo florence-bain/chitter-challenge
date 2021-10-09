@@ -22,9 +22,7 @@ get '/peeps/new' do
 end
 
 post '/peeps' do
-  url = params['url']
-  connect =PG.connect(dbname: 'chitter_test')
-  connection.exec("INSERT INTO peeps (url) VALUES('#{url})")
+  Peep.create(url: params[:url])
   redirect '/peeps'
 end 
 
