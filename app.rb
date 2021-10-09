@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/peep.rb'
+require 'pg'
 
 class Chitter < Sinatra::Base
   configure :development do
@@ -12,17 +13,17 @@ get '/' do
   'chitter feed'
 end 
 
+get '/peeps/new' do 
+  erb :'peeps/new'
+end
+
 get '/peeps' do
   @peeps = Peep.all
     erb :'peeps/index'
 end 
 
-get '/peeps/new' do 
-  erb :'peeps/new'
-end
-
 post '/peeps' do
-  Peep.create(url: params[:url])
+  Peep.create(url: params[:url], time: params[:time])
   redirect '/peeps'
 end 
 
