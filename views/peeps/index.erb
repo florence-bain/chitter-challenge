@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+<%require 'time'%>
   
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Exo:200" rel="stylesheet" type="text/css">
-  
+<link href="https://fonts.googleapis.com/css?family=Exo:200" rel="stylesheet" type="text/css">
+</head>
 
   <title>Welcome to Chitter</title>
-</head>
+
 
 <header>
   <h1 class="main-heading">Welcome to Chitter</h1>
 </header>
 <br>
-<body>
+
 
 <ul>
   <% @peeps.each do |peep| %>
-    <div><%= peep %></div>
+    <p><br><%= peep.content %><br>
+    <%= Time.parse(peep.time).strftime("%H:%M, %d %B")%>
+    </br></p>
   <% end %>
 </ul>
+
+
+</html>
